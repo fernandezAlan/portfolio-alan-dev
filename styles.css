@@ -54,6 +54,7 @@ body {
   #title > strong {
     color:white;
     font-size:90px;
+    font-weight: bold;
   }
   #title > strong > span{
     color:#1ABC9C;
