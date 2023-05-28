@@ -1,0 +1,505 @@
+/* styles.css */
+
+/* Estilos generales */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #fff;
+    overflow-x:hidden;
+  }
+  aside{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 15vw;
+    height: 100vh;
+    z-index: 2;
+  }
+  nav{
+    height: 100%;
+    display: flex;
+  }
+  nav > ul {
+    list-style: none;
+    justify-content: space-between;
+    flex-direction: column;
+    display: flex;
+    height: 40%;
+    margin: auto;
+    color: #999;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  #about{
+    height: 100vh;
+  }
+  nav a {
+    color:#333;
+    text-decoration: none;
+  }
+  nav  a:hover{
+    color:#1ABC9C;
+  }
+  .active{
+    color:#1ABC9C;
+  }
+  #title {
+    font-weight: lighter;
+    font-size: 25px;
+    color:#999
+  }
+  #title > strong {
+    color:white;
+    font-size:90px;
+  }
+  #title > strong > span{
+    color:#1ABC9C;
+  }
+  #subtitle , #typed{
+    font-size:30px;
+    font-weight: bold;
+    color:#1ABC9C;
+  }
+  #title-container{
+    position: absolute;
+    top: 25%;
+    left: 25%;
+  }
+  #subtitle > p {
+    font-weight: lighter;
+    font-size: 25px;
+    color:#999
+  }
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 30px;
+    box-sizing: border-box; /* Agregado para incluir el padding en el ancho del contenedor */
+  }
+  
+#home{
+  width: 100vw;
+  height: 100vh;
+}
+  
+  h1, h2 {
+    margin: 0;
+    font-weight: 400;
+  }
+  
+  main {
+    padding: 20px; /* Agregado padding al main */
+  }
+  
+  h3 {
+    font-weight: 400;
+    margin-top: 40px;
+  }
+  
+  .card {
+    background-color: #292929;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    filter: brightness(0.5);
+  }
+
+
+  .card:hover {
+    transform: translateY(-15px);
+    background-color: #3e3e3e;
+    filter: brightness(1);
+  }
+  .card a {
+    text-decoration: none;
+    color:  #1ABC9C;
+  }
+  .card h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color:  #1ABC9C;
+  }
+  
+  .card p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .card .date {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .date-education {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .card .description {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .card .responsibilities {
+    margin-top: 10px;
+  }
+  
+  .skills ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  #social-links-about a{
+    text-decoration: none;
+  }
+  #about-info{
+    background-color: #292929;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .skills li {
+    display: inline-block;
+    color: #1ABC9C;
+    background-color: #292929;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin: 5px;
+  }
+  
+#about{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+  
+  .about-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: space-between;
+  }
+  #social-links-about{
+    display: flex;
+    width: 15%;
+    margin-left: 55px;
+    justify-content: space-between;
+  }
+  .about img {
+    width: 150px; /* Ajusta el tamaño de la imagen según tus preferencias */
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%; /* Aplica un borde circular a la imagen */
+    margin-right: 20px; /* Agrega un espacio entre la imagen y el texto */
+  }
+  
+  .about-content > figcaption{
+    width:75%;
+  }
+
+
+
+  
+  #education .card p, #education .card ul li {
+    color: #ccc;
+  }
+  
+  #education .card ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  #education .card ul li {
+    margin-bottom: 10px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .contact-form {
+    margin-top: 20px;
+  }
+  #contact {
+    margin:120px 0px;
+  }
+  
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .contact-form textarea {
+    height: 150px;
+  }
+  
+  .contact-form input[type="submit"] {
+    background-color: #1ABC9C;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .contact-form input[type="submit"]:hover {
+    background-color: #16A085;
+  }
+  
+  .contact-form .success-message {
+    color: #1ABC9C;
+    margin-top: 10px;
+  }
+  
+  .contact-form .error-message {
+    color: #E74C3C;
+    margin-top: 10px;
+  }
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
+  
+  .contact-info,
+  .social-links {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .contact-info h3,
+  .social-links h3 {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  
+  .contact-info p {
+    margin: 0;
+    margin-bottom: 5px;
+  }
+  
+  .social-links ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .social-links li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .social-links a {
+    color: #999;
+    text-decoration: none;
+  }
+  
+  .social-links a:hover {
+    text-decoration: underline;
+  }
+footer{
+  display: flex;
+  justify-content: space-evenly;
+  height: 130px;
+}  
+
+.contact-info span {
+  color:#999;
+  margin-left: 10px;
+}
+#education ul{
+  list-style: none;
+}
+#education > div {
+  background-color: #292929;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#education > div > h4 {
+  color: #1ABC9C;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.section-title{
+  color: #1ABC9C;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.container > p{
+  color: #999;
+  margin-bottom: 5px;
+}
+  /* Animaciones */
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .slide-in-left {
+    animation: slideInLeft 0.8s ease-in-out;
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  #element{
+    color: white;
+  }
+  .slide-in-right {
+    animation: slideInRight 0.8s ease-in-out;
+  }
+/* Estilos del contenedor del scroll */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Estilos de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+  background-color: #1ABC9C;
+  border-radius: 5px;
+}
+
+/* Estilos del fondo del scroll */
+::-webkit-scrollbar-track {
+  background-color: #1a1a1a;
+
+}
+
+/* Estilos de los botones de flecha */
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Animación de la barra de carga */
+::-webkit-scrollbar-thumb:horizontal:active {
+  background-color: #1ABC9C;
+  animation: scroll-loading 2s infinite;
+}
+
+@keyframes scroll-loading {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+ 
+  /* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+  aside{
+    display:none;
+  }
+  #title-container{
+    left: 0px;
+    text-align: center;
+  }
+  #title {
+    font-size: 20px;
+}
+#title > strong {
+  font-size: 60px;
+}
+#subtitle, #typed {
+  font-size: 20px;
+}
+header {
+  height: 100%;
+}
+.container{
+  padding:0px;
+}
+.about-content {
+  margin: 0px;
+  flex-direction: column;
+}
+
+.about-content > figcaption {
+  width: 100%;
+}
+h3 {
+  margin-top:20px;
+}
+#social-links-about{
+  margin-top: 20px;
+  width:60%;
+}
+.about img{
+  margin-bottom:20px;
+}
+
+.card{
+  filter:none;
+  margin-bottom:20px;
+}
+#education ul{
+  padding:0px;
+}
+.contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea{
+  width: 90%;
+}
+.social-links {
+  display:none;
+}
+footer{
+  padding:30px 30px;
+}
+}
+
+/* Estilos para tabletas */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Agrega aquí tus estilos específicos para tabletas */
+}
