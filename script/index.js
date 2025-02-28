@@ -1,13 +1,6 @@
    //action="https://formsubmit.co/alan.fer09@email.com"
    
-   const form = document.getElementsByTagName('form')[0];
-
-   // Agregar un manejador de eventos para el evento 'submit'
-   form.onsubmit = function(event) {
-       event.preventDefault(); // Esto evita que el formulario se envíe de manera predeterminada
-       window.location.href = 'thanks.html'
-       // Aquí puedes agregar la lógica que deseas ejecutar cuando se envíe el formulario
-   };
+ 
    // Función para agregar la clase 'active' a la opción de navegación activa
    function setActiveNavLink() {
     const navLinks = document.querySelectorAll('.nav-link');
