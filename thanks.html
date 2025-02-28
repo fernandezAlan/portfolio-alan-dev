@@ -1,0 +1,66 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracias por tu mensaje</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #1e1e1e;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 16px;
+            color: #b3b3b3;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #007bff;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Gracias por tu mensaje!</h1>
+        <p>He recibido tu mensaje y te responderé lo antes posible.</p>
+        <p>volveras al sitio en <span id="sec">10</span> segundos</p>
+        <a href="index.html">Volver al inicio</a>
+    </div>
+    <script>
+        let sec = 10
+        const interval = setInterval(()=>{
+            if(sec===0) {
+                clearInterval(interval)
+                 window.location.href = 'index.html'
+            }
+            document.getElementById('sec').textContent = sec
+            sec--
+        },1000)
+    </script>
+</body>
+</html>
