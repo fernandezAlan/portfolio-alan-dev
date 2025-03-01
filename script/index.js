@@ -1,6 +1,17 @@
    //action="https://formsubmit.co/alan.fer09@email.com"
    
- 
+   document.getElementById("menu-mobile").addEventListener("click",()=>{
+    document.getElementsByTagName("aside")[0].style.display="block"
+    //document.getElementById("title-container").style.display ="none"
+    document.getElementById("menu-mobile").style.display ="none"
+    document.getElementById("menu-close-mobile").style.display="block"
+   })
+   document.getElementById("menu-close-mobile").addEventListener("click",()=>{
+    document.getElementsByTagName("aside")[0].style.display="none"
+    //document.getElementById("title-container").style.display ="block"
+    document.getElementById("menu-mobile").style.display ="block"
+    document.getElementById("menu-close-mobile").style.display="none"
+   })
    // Función para agregar la clase 'active' a la opción de navegación activa
    function setActiveNavLink() {
     const navLinks = document.querySelectorAll('.nav-link');
@@ -35,6 +46,10 @@
   // Función de desplazamiento suave
   function smoothScroll(event, target) {
     event.preventDefault();
+    document.getElementsByTagName("aside")[0].style.display="none"
+    //document.getElementById("title-container").style.display ="block"
+    document.getElementById("menu-mobile").style.display ="block"
+    document.getElementById("menu-close-mobile").style.display="none"
     const element = document.querySelector(target);
     window.scrollTo({
       behavior: 'smooth',

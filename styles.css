@@ -10,6 +10,12 @@ body {
     color: #c0c0c0;
     overflow-x:hidden;
   }
+  #menu-close-mobile{
+    display: none;
+    position: fixed;
+    top: 35px;
+    left: 35px;
+  }
   aside{
     position: fixed;
     top: 0px;
@@ -256,7 +262,7 @@ body {
   }
   
   .contact-form input[type="submit"]:hover {
-    background-color: #16A085;
+    background-color: #080808;
   }
   
   .contact-form .success-message {
@@ -361,6 +367,18 @@ footer{
   column-gap: 10px;
   align-items: center;
 }
+
+#location{
+  position: absolute;
+}
+#contact-email-phone{
+  margin-top: 10px;
+  display: flex;
+  column-gap: 30px;
+}
+#menu-mobile{
+  display: none;
+}
   /* Animaciones */
   
   @keyframes fadeIn {
@@ -449,8 +467,19 @@ footer{
  
   /* Estilos para dispositivos móviles */
 @media (max-width: 767px) {
-  aside{
+  aside {
     display:none;
+    width: 100%;
+    background-color: #080808e5;
+    backdrop-filter: blur(5px); /* Aplica el blur */
+    -webkit-backdrop-filter: blur(5px); /* Compatibilidad con Safari */
+  }
+  aside > nav > ul > li > a {
+    font-size: 25px;
+    color:#1ABC9C;
+  }
+  nav > ul {
+    height: 60%;
   }
   #title-container{
     left: 0px;
@@ -458,6 +487,12 @@ footer{
   }
   #title {
     font-size: 20px;
+    text-align: left;
+    margin-left: 35px;
+}
+#subtitle{
+  text-align: left;
+  margin-left: 35px;
 }
 #title > strong {
   font-size: 60px;
@@ -505,6 +540,26 @@ h3 {
 }
 footer{
   padding:30px 30px;
+}
+
+#location{
+  position: static;
+}
+#about-info{
+  margin-bottom: 50px;
+}
+#contact-email-phone{
+  display: block;
+}
+#menu-mobile{
+  display: block;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  padding: 10px;
+  border-radius: 99999px;
+  background-color: #1a1a1a;
+  z-index: 99999;
 }
 }
 
