@@ -13,8 +13,8 @@ body {
   #menu-close-mobile{
     display: none;
     position: fixed;
-    top: 35px;
-    left: 35px;
+    top: 10px;
+    left: 10px;
   }
   aside{
     position: fixed;
@@ -23,6 +23,9 @@ body {
     width: 15vw;
     height: 100vh;
     z-index: 2;
+  }
+  nav > ul > li > svg{
+    display: none;
   }
   nav{
     height: 100%;
@@ -36,7 +39,7 @@ body {
     height: 40%;
     margin: auto;
     color: #999;
-    font-size: 13px;
+    font-size: 15px;
     cursor: pointer;
   }
   #about{
@@ -470,9 +473,16 @@ footer{
   aside {
     display:none;
     width: 100%;
-    background-color: #080808e5;
+    background-color: #080808f0;
     backdrop-filter: blur(5px); /* Aplica el blur */
     -webkit-backdrop-filter: blur(5px); /* Compatibilidad con Safari */
+  }
+  nav > ul > li {
+    display: flex;
+    column-gap: 10px;
+  }
+  nav > ul > li > svg{
+    display: block;
   }
   aside > nav > ul > li > a {
     font-size: 25px;
@@ -555,12 +565,10 @@ footer{
 #menu-mobile{
   display: block;
   position: fixed;
-  top: 15px;
-  left: 15px;
   padding: 10px;
-  border-radius: 99999px;
   background-color: #1a1a1a;
   z-index: 99999;
+  width: 100%;
 }
 }
 

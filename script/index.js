@@ -6,17 +6,20 @@
     document.getElementById("menu-mobile").style.display ="none"
     document.getElementById("menu-close-mobile").style.display="block"
    })
+
    document.getElementById("menu-close-mobile").addEventListener("click",()=>{
     document.getElementsByTagName("aside")[0].style.display="none"
     //document.getElementById("title-container").style.display ="block"
     document.getElementById("menu-mobile").style.display ="block"
     document.getElementById("menu-close-mobile").style.display="none"
    })
+
+   
    // Función para agregar la clase 'active' a la opción de navegación activa
    function setActiveNavLink() {
     const navLinks = document.querySelectorAll('.nav-link');
     const currentSection = getCurrentSection();
-
+    console.log("currentSection",currentSection)
     navLinks.forEach(link => {
       if (link.getAttribute('href') === `#${currentSection}`) {
         link.classList.add('active');
@@ -34,8 +37,8 @@
     sections.forEach(section => {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.clientHeight;
-
-      if (window.pageYOffset >= sectionTop - sectionHeight / 2) {
+      console.log("sections",{sectionTop,sectionHeight})
+      if (window.scrollY >= sectionTop - sectionHeight / 2) {
         currentSection = section.getAttribute('id');
       }
     });
@@ -46,10 +49,14 @@
   // Función de desplazamiento suave
   function smoothScroll(event, target) {
     event.preventDefault();
-    document.getElementsByTagName("aside")[0].style.display="none"
-    //document.getElementById("title-container").style.display ="block"
-    document.getElementById("menu-mobile").style.display ="block"
-    document.getElementById("menu-close-mobile").style.display="none"
+    const isMobile = window.innerWidth <= 768; // Ajusta el tamaño según tu criterio de mobile
+    
+    if (isMobile) {
+        document.getElementsByTagName("aside")[0].style.display = "none";
+        // document.getElementById("title-container").style.display = "block";
+        document.getElementById("menu-mobile").style.display = "block";
+        document.getElementById("menu-close-mobile").style.display = "none";
+    }
     const element = document.querySelector(target);
     window.scrollTo({
       behavior: 'smooth',
